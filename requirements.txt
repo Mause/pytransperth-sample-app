@@ -1,1 +1,2 @@
 -e git+https://github.com/Mause/pytransperth.git#egg=transperth
+tornado==3.1.1
