@@ -1,1 +1,1 @@
--e https://github.com/Mause/pytransperth.git
+-e git+https://github.com/Mause/pytransperth.git
