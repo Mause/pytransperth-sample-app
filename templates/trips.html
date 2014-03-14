@@ -33,7 +33,9 @@
                 <br/>
 
                 <strong>Price:</strong>
-                ${{trip['meta']['price']}}
+                ${{
+                '{:.2f}'.format(trip['meta']['price'])
+                }}
                 <br/>
             </div>
             <br/>
