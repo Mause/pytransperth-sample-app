@@ -8,6 +8,9 @@ logger = logging.getLogger(__name__)
 
 
 class TransperthAuthMixin(AuthMixin):
+    """
+    Allows the use of the transperth authentication mechanisms
+    """
     def is_authenticated(self):
         return self.get_secure_cookie('transperth_creds') is not None
 
