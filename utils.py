@@ -60,6 +60,10 @@ class SmartRiderMixin(tornado.web.RequestHandler):
         return super().render(*args, **kwargs)
 
     def get_smartrider(self):
+        """
+        Grabs the users smart rider, checks the query params, then grabs all
+        the smart riders and returns that which is default
+        """
         sr_code = self.get_argument('sr_code', None)
 
         if sr_code is not None:
