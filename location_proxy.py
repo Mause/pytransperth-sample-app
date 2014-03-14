@@ -8,6 +8,11 @@ _location_cache = {}
 
 
 def determine_location(from_loco, to_loco):
+    """
+    Wraps transperth's determine_location function, providing
+    a caching functionality
+    """
+
     cache_from = _location_cache.get(from_loco)
     cache_to = _location_cache.get(to_loco)
 
