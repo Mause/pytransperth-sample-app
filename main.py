@@ -12,6 +12,7 @@ sys.path.insert(0, os.path.join(here, '..'))
 import tornado.ioloop
 import tornado.log
 import tornado.web
+from dateutil.parser import parse as date_parse
 
 # application specific
 from transperth.jp.fares import fares_for_route
@@ -101,7 +102,11 @@ class TripHandler(SmartRiderMixin, BaseRequestHandler):
     def get(self):
         sr_code = self.get_smartrider()
 
-        actions = self.current_user.get_actions(sr_code)
+        actions = self.current_user.get_actions(
+            sr_code,
+            date_parse('01/01/2010'),
+            date_parse('01/01/2015')
+        )
         actions = sorted(
             actions,
             key=itemgetter('time'),
