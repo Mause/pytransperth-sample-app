@@ -81,7 +81,7 @@ def fares_to_table(fares):
         table_rows.append([key.title()])
 
         table_rows[-1].extend(
-            '${}'.format(ticket_type[key])
+            '${:.2f}'.format(ticket_type[key])
             for ticket_type in values
         )
 
