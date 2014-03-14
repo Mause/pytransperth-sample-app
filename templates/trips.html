@@ -38,6 +38,7 @@
             </div>
             <br/>
 
+        {% if len(trip['path']) > 2 %}
             <div>
                 <strong>Route:</strong>
                 {% for step in trip['path'][:-1] %}
@@ -47,6 +48,7 @@
                 {{trip['path'][-1]}}
             </div>
             <br/>
+        {% end %}
 
         {% for step in trip['steps'] %}
             <div>
