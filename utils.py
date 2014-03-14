@@ -75,7 +75,7 @@ def fares_to_table(fares):
     keys, values = zip(*fares.items())
 
     table_rows = [['Fare Type']]
-    table_rows[-1].extend(key.title() for key in keys)
+    table_rows[-1].extend(key.title() for key in sorted(keys))
 
     for key in sorted(values[0].keys()):
         table_rows.append([key.title()])
