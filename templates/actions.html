@@ -33,7 +33,7 @@
                     {% if action['amount'] == 0 %}
                         free
                     {% else %}
-                        ${{action['amount']}}
+                        ${{'{:.2f}'.format(action['amount'])}}
                     {% end %}
                     <br/>
                 {% end %}

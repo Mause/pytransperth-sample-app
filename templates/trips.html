@@ -72,7 +72,9 @@
                 {% if step['tagoff']['amount'] == 0 %}
                     free
                 {% else %}
-                    ${{step['tagoff']['amount']}}
+                    ${{
+                    '{:.2f}'.format(step['tagoff']['amount'])
+                    }}
                 {% end %}
                 <br/>
 
